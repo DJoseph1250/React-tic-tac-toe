@@ -50,6 +50,10 @@ class Board extends React.Component {
         let status;
         if (winner) {
             status = "CONGRATULATIONS PLAYER " + winner + ". YOU'VE WON!"
+            this.setState = {
+                squares: Array(9).fill(null),
+                xIsnext: true
+            };
         } else {
             status = 'Next player: ' + (this.state.xIsnext ? 'X' : 'O');
         }
