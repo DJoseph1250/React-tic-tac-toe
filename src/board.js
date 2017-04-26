@@ -12,10 +12,10 @@ class Board extends React.Component {
 
     handleClick(i) {
         const squares = this.state.squares.slice();
-        // squares[i] = this.state.xIsnext ? 'X' : 'O';
         if(this.checkForWinner(squares) || squares[i]) {
             return;
         }
+        squares[i] = this.state.xIsnext ? 'X' : 'O';
         this.setState({
             squares: squares,
             xIsnext: !this.state.xIsnext
